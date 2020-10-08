@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			padding: 20px;
+		}
+
+		.aa {
+			height: 21px;
+			background-color: red;
+
+		}
+
+		.n0 {
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.box-1 {
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 2px solid black;
+			padding: 10px;
+			margin-top: 20px;
+		}
+
+		.n1 {
+			overflow-y: scroll;
+			height: 60px;
+			margin: 6px 0;
+		}
+
+		.box2 {
+			height: 50px;
+			background-color: #EE82EE;
+			margin: 20px 0;
+		}
+
+		.box2:hover {
+			margin-right: -10px;
+			margin-left: -10px;
+		}
+
+		.box4 {
+			width: 0;
+			height: 0;
+			border: 50px solid transparent;
+			border-bottom: 50px solid #FFA500;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="aa">
+		<p class="n0">aaaaa</p>
+	</div>
+	<div class="box-1">
+		<p class="n1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem sapiente at consectetur
+			repudiandae aliquid nesciunt error, maiores, assumenda non cum neque aliquam repellat dolores, corporis aperiam
+			debitis ullam mollitia?</p>
+		<div class="box2">
+			<p class="box3"></p>
+		</div>
+		<p class="n1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti maiores illo porro. Quae cum
+			dolorem quod quia, molestiae odit facere dolorum praesentium alias dolor commodi repellat maiores ipsum?
+			Voluptatibus.</p>
+	</div>
+	<div class="box4"></div>
+</body>
+
+</html>
