@@ -7,7 +7,7 @@
 	<title>Document</title>
 </head>
 <style>
-	body {
+	* {
 		padding: 0;
 		margin: 0;
 	}
@@ -17,60 +17,170 @@
 		position: relative;
 		left: 0;
 		right: 0;
-		top: 0;
-		bottom: 0;
-		height: 100vh;
+		margin: auto;
+
+	}
+
+	input {
+		visibility: hidden;
+	}
+
+	ul {
+		width: 400px;
+		list-style: none;
+		position: absolute;
+		left: 0;
+		right: 0;
 		margin: auto;
 	}
 
-	div {
-		width: 400px;
-		position: relative;
-
-	}
-
-	div img {
-		width: 400px;
-		display: none;
+	ul>li {
 		position: absolute;
+		width: 400px;
+		top: 0;
+		right: 0;
 		left: 100%;
-
-
+		transition: 1s;
+		display: none;
 	}
 
-	input:nth-child(1):checked~div>img:nth-child(1),
-	input:nth-child(2):checked~div>img:nth-child(2),
-	input:nth-child(3):checked~div>img:nth-child(3),
-	input:nth-child(4):checked~div>img:nth-child(4),
-	input:nth-child(5):checked~div>img:nth-child(5) {
+	ul li img {
+		position: relative;
+		width: 400px;
+	}
+
+	input:nth-child(1):checked~ul li:nth-child(1),
+	input:nth-child(2):checked~ul li:nth-child(2),
+	input:nth-child(3):checked~ul li:nth-child(3),
+	input:nth-child(4):checked~ul li:nth-child(4),
+	input:nth-child(5):checked~ul li:nth-child(5) {
 		display: block;
 		left: 0;
+	}
+
+
+	ul li label:nth-last-child(2) {
+		height: 30px;
+		position: absolute;
+		left: 0;
+		color: aliceblue;
+		padding: 5px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		font-size: 20px;
+		background-color: #fff;
+		opacity: 0.1;
+	}
+
+	ul li label:nth-last-child(2):hover {
+
+		background-color: gold;
+		opacity: 1;
+
+	}
+
+	ul li label:nth-last-child(1) {
+		height: 30px;
+		position: absolute;
+		right: 0;
+		color: aliceblue;
+		padding: 5px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		font-size: 20px;
+		background-color: #fff;
+		opacity: 0.1;
+	}
+
+	ul li label:nth-last-child(1):hover {
+		background-color: gold;
+		opacity: 1;
+	}
+
+	.remove {
+		position: relative;
+
+		padding: 15px;
+		background-color: #FFF;
+		opacity: 0.8;
+		border-radius: 30%;
+		z-index: 99999999;
+		margin-top: 120%;
+	}
+
+	.remove label {
+		display: inline-block;
+		padding: 5px;
+		margin: 10px;
+		background-color: gold;
+		opacity: 1;
+		border-radius: 50%;
+
+
+	}
+
+	.remove label:hover {
+		background-color: aqua;
+		opacity: 1;
+
 	}
 </style>
 
 <body>
 	<section>
-		<input type="radio" checked name="radio" id="photo1">
+		<input type="radio" name="radio" id="photo1">
 		<input type="radio" name="radio" id="photo2">
 		<input type="radio" name="radio" id="photo3">
 		<input type="radio" name="radio" id="photo4">
 		<input type="radio" name="radio" id="photo5">
-		<div>
-			<img
-				src="https://images.unsplash.com/photo-1602299536631-0ef7aa1fa70a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-				alt="">
-			<img
-				src="https://images.unsplash.com/photo-1517586979036-b7d1e86b3345?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-				alt="">
-			<img
-				src="https://images.unsplash.com/photo-1592276050376-f2ba904a4cc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-				alt="">
-			<img
-				src="https://images.unsplash.com/photo-1594044126444-f9499a9532d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-				alt="">
-			<img
-				src="https://images.unsplash.com/photo-1586181588304-957b86343441?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-				alt="">
+		<ul class="remove-0">
+			<li>
+				<a href="#"><img
+						src="https://images.unsplash.com/photo-1602299536631-0ef7aa1fa70a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						alt=""></a>
+				<label for="photo5">&lt;</label>
+				<label for="photo2">&gt;</label>
+			</li>
+			<li>
+				<a href="#"><img
+						src="https://images.unsplash.com/photo-1517586979036-b7d1e86b3345?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						alt=""></a>
+				<label for="photo1">&lt;</label>
+				<label for="photo3">&gt;</label>
+			</li>
+			<li>
+				<a href="#"><img
+						src="https://images.unsplash.com/photo-1592276050376-f2ba904a4cc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						alt=""></a>
+				<label for="photo2">&lt;</label>
+				<label for="photo4">&gt;</label>
+			</li>
+			<li>
+				<a href="#"><img
+						src="https://images.unsplash.com/photo-1594044126444-f9499a9532d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						alt=""></a>
+				<label for="photo3">&lt;</label>
+				<label for="photo5">&gt;</label>
+			</li>
+			<li>
+				<a href="#"><img
+						src="https://images.unsplash.com/photo-1586181588304-957b86343441?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						alt=""></a>
+				<label for="photo4">&lt;</label>
+				<label for="photo1">&gt;</label>
+			</li>
+
+
+
+		</ul>
+		<div class="remove">
+			<label for="photo1"></label>
+			<label for="photo2"></label>
+			<label for="photo3"></label>
+			<label for="photo4"></label>
+			<label for="photo5"></label>
 		</div>
 	</section>
 </body>
