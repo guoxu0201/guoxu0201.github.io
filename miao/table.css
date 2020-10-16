@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+
+}
+
+.table {
+  width: 100%;
+}
+
+.table thead tr {
+  border-bottom: 4px solid #E2E5E9;
+  line-height: 40px;
+}
+
+.table tbody tr:nth-child(1),
+.table tr:nth-child(2) {
+  border-bottom: 2px solid #E2E5E9;
+}
+
+.table-bordered {
+  border-collapse: collapse;
+  text-align: left;
+  border: 2px solid #E2E5E9;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 2px solid #E2E5E9;
+  line-height: 40px;
+}
+
+.table-bordered thead {
+  border-bottom: 4px solid #E2E5E9;
+}
+
+.table-borderless thead tr {
+  border: none;
+}
+
+.table-borderless tbody tr:nth-child(1),
+.table-borderless tr:nth-child(2) {
+  border-bottom: none;
+}
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead {
+  border: none;
+}
+
+.table-dark {
+  background-color: #343A40;
+}
+
+.table-dark tbody>tr,
+.table-dark thead>tr {
+  color: #Fff;
+}
+
+.table-hover.table-dark tbody tr:hover {
+  background-color: #43494E;
+}
+
+.table-dark.table-striped tbody tr:nth-child(1),
+.table-dark.table-striped tbody tr:nth-child(3) {
+  background-color: #43494E;
+}
+
+.table-hover {}
+
+.table-hover tbody tr:hover {
+  background-color: #ECECEC;
+}
+
+.table-striped {}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #ECECEC;
+}
+
+.table-sm {
+  zoom: 0.5;
+}
