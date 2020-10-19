@@ -14,66 +14,60 @@
 	}
 
 	section {
-		font-size: 0;
-	}
-
-	.note {
-
-		font-size: 16px;
+		position: relative;
 	}
 
 	.border1 {
 		position: sticky;
 		width: 190px;
 		height: 100vh;
-		border: 1px solid black;
-		border-left: 2px solid black;
-		border-top: 2px solid black;
-		border-bottom: 2px solid black;
+		border: 2px solid black;
 
+	}
+
+	.center {
+		position: fixed;
+		left: 190px;
+		top: 0;
 	}
 
 	.border2 {
+		position: fixed;
 		width: 190px;
 		height: 100vh;
-		border: 1px solid black;
 		border-top: 2px solid black;
 		border-bottom: 2px solid black;
-		position: fixed;
-		right: 190px;
+		border-right: 2px solid black;
+		top: 0;
+		right: 0;
 	}
+
 
 	.border3 {
+		position: fixed;
 		width: 190px;
 		height: 100vh;
-		border: 1px solid black;
-		border-right: 2px solid black;
-		border-top: 2px solid black;
-		border-bottom: 2px solid black;
-		position: fixed;
-		right: 0px;
-
-	}
-
-
-	.center {
-		width: calc(100% - 190px * 3);
-		position: fixed;
-		left: 190px;
+		border: 2px solid black;
+		right: 190px;
+		top: 0;
 
 	}
 
 	.top {
+		width: calc(100vw - 190px * 3);
 		height: 80px;
-		border: 1px solid black;
-		border-top: 2px solid black;
+		border: 2px solid black;
+		border-left: 0;
+		border-right: 0;
+
 	}
 
 	.contain {
+		width: calc(100vw - 190px * 3);
 		height: calc(100vh - 80px);
-		border: 1px solid black;
 		border-bottom: 2px solid black;
 		overflow-y: scroll;
+		padding: 10px;
 	}
 </style>
 
