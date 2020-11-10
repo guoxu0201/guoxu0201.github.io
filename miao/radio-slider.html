@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<style>
+<style type="text/scss">
 	* {
 		padding: 0;
 		margin: 0;
@@ -32,22 +32,26 @@
 		left: 0;
 		right: 0;
 		margin: auto;
+
+		& li {
+			position: absolute;
+			width: 400px;
+			top: 0;
+			right: 0;
+			left: 100%;
+			transition: 1s;
+			display: none;
+
+			& img {
+				position: relative;
+				width: 400px;
+			}
+
+		}
 	}
 
-	ul>li {
-		position: absolute;
-		width: 400px;
-		top: 0;
-		right: 0;
-		left: 100%;
-		transition: 1s;
-		display: none;
-	}
 
-	ul li img {
-		position: relative;
-		width: 400px;
-	}
+
 
 	input:nth-child(1):checked~ul li:nth-child(1),
 	input:nth-child(2):checked~ul li:nth-child(2),
@@ -108,25 +112,22 @@
 		border-radius: 30%;
 		z-index: 99999999;
 		margin-top: 120%;
-	}
-
-	.remove label {
+	&	label {
 		display: inline-block;
 		padding: 5px;
 		margin: 10px;
 		background-color: gold;
 		opacity: 1;
 		border-radius: 50%;
-
-
-	}
-
-	.remove label:hover {
+		&:hover {
 		background-color: aqua;
 		opacity: 1;
-
+			}
+		}
 	}
+
 </style>
+<script src="sass.link.min.js"></script>
 
 <body>
 	<section>

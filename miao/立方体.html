@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body {
+		padding: 500px;
+	}
+
+	section div {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		opacity: 0.5;
+		box-shadow: 0px 0px 0 0px;
+		transition: 1s;
+
+	}
+
+	section:hover div {
+		box-shadow: 0 0 0 50px;
+		animation-play-state: running;
+	}
+
+	@keyframes circle {
+		from {
+			transform: rotateX(0) rotateY(360deg);
+		}
+
+		to {
+			transform: rotateX(360deg) rotateY(720deg);
+		}
+	}
+
+	section {
+		width: 100px;
+		height: 100px;
+		transform-style: preserve-3d;
+		transform: rotateX(20deg) rotateY(20deg);
+		transition: 3s;
+		animation: circle 2s linear infinite;
+
+	}
+
+	.show {
+		background-color: red;
+		transform: translateZ(50px);
+
+	}
+
+	.show1 {
+		background-color: aqua;
+		transform: translateZ(-50px);
+	}
+
+	.show2 {
+		background-color: gold;
+		transform: translateY(-50px) rotateX(-90deg);
+	}
+
+	.show3 {
+		background-color: orange;
+		transform: translateY(50px) rotateX(-90deg);
+	}
+
+	.show4 {
+		background-color: black;
+		transform: translateX(-50px) rotateY(90deg);
+	}
+
+	.show5 {
+		background-color: grey;
+		transform: translateX(50px) rotateY(90deg);
+	}
+</style>
+
+<body>
+	<section>
+		<div class="show"></div>
+		<div class="show1"></div>
+		<div class="show2"></div>
+		<div class="show3"></div>
+		<div class="show4"></div>
+		<div class="show5"></div>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body {
+		padding: 100px;
+		margin: 0;
+	}
+
+	div {
+		width: 100px;
+		height: 100px;
+		border: 1px solid;
+		transform-style: preserve-3d;
+		overflow: hidden;
+		position: relative;
+	}
+
+	img {
+		height: 100px;
+		position: absolute;
+		animation: apple 5s infinite steps(28);
+
+	}
+
+	@keyframes apple {
+		from {
+			left: 0;
+		}
+
+		to {
+			left: -2800px;
+		}
+	}
+</style>
+
+<body>
+	<div><img src="https://css-tricks.com/wp-content/uploads/2016/06/web_heart_animation.png
+		" alt=""></div>
+</body>
+
+</html>
