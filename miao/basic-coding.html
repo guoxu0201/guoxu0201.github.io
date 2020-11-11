@@ -26,8 +26,8 @@
 		var a = Number(prompt("a:"))
 		var b = Number(prompt("b:"))
 		var c = Number(prompt("c:"))
-		var d = (a + b) / c
-		console.log(d)
+		var d = ((a + b) / c).toFixed(0)
+		console.log()
 	</script>
 	<script type="foo" id="ch0103/04">
 		var a = Number(prompt("a:"))
@@ -91,9 +91,9 @@
 	<script type="foo" id="ch0103/13">
 		var n = prompt("")
 		var a = n % 10
-		var b = n / 10 % 10
-		var c = n / 100
-		var m = (n % 10) * 100 + (n / 10 % 10).toFixed(0) * 10 + (n / 100).toFixed(0) * 1
+		var b = (n - a) / 10 % 10
+		var c = (n - a - b * 10) / 100
+		var m = "" + a + b + c
 		console.log(m)
 	</script>
 	<script type="foo" id="ch0103/14">
@@ -103,7 +103,7 @@
 		var s = 20 * 1000
 		var v = pi * r * r * h
 		var t = s / v
-		console.log(t.toFixed(0))
+		console.log(Math.ceil(t) )
 
 	</script>
 	<script type="foo" id="ch0103/15">
@@ -111,7 +111,7 @@
 		var x = Number(prompt("x"))
 		var y = Number(prompt("y"))
 		var a = y / x
-		var b = n - a
+		var b = n - MAth.ceil(a)
 		console.log(b)
 	</script>
 	<script type="foo" id="ch0103/16">
@@ -124,7 +124,7 @@
 		var c = Math.sqrt(b * b - a * a)
 		console.log(c)
 	</script>
-	<script type="foo" id="ch0103/17">
+	<script xtype="foo" id="ch0103/17">
 		var x1 = Number(prompt("x1"))
 		var y1 = Number(prompt("y1"))
 		var x2 = Number(prompt("x2"))
@@ -134,7 +134,8 @@
 		var a1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 		var a2 = Math.sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1))
 		var a3 = Math.sqrt((x2 - x3) * (x2 - x3) + (y3 - y2) * (y3 - y2))
-		var s = (a1 + a2 + a3) / 2
+		var p = (a1 + a2 + a3) / 2
+		var s = Math.sqrt(p * (p - a1) * (p - a2) * (p - a3))
 		console.log(s.toFixed(2))
 	</script>
 	<script type="foo" id="ch0103/18">
@@ -152,7 +153,8 @@
 	</script>
 	<script type="foo" id="ch0103/20">
 		var n =Number(prompt("n"))
-		var s = 
+		var s = Math.pow(2,n)
+		console.log(s)
 	</script>
 	<script type="foo" id="ch0104/01">
 		var n = Number(prompt("n"))
@@ -300,7 +302,7 @@
 			console.log(b)
 		} 
 	</script>
-	<script id="ch0104/16">
+	<script type="foo" id="ch0104/16">
 		var a = Number(prompt("a"))
 		var b = Number(prompt("b"))
 		var c = Number(prompt("c"))
