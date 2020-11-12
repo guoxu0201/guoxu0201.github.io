@@ -26,7 +26,7 @@
 		var a = Number(prompt("a:"))
 		var b = Number(prompt("b:"))
 		var c = Number(prompt("c:"))
-		var d = ((a + b) / c).toFixed(0)
+		var d = Math.floor((a + b) / c)
 		console.log(d)
 	</script>
 	<script type="foo" id="ch0103/04">
@@ -173,7 +173,7 @@
 			console.log(a.toFixed(2))
 
 		} else {
-			console.log((a * (-1)).toFixed(2)
+			console.log((a * (-1)).toFixed(2))
 		}
 	</script>
 	<script type="foo" id="ch0104/03">
@@ -227,7 +227,7 @@
 	</script>
 	<script type="foo" id="ch0104/09">
 		var n = Number(prompt("n"))
-		var flag = true
+		var flag = false
 		// <!-- if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
 		// 	console.log("3,5,7")
 		// } else if (n % 3 == 0 && n % 5 == 0 && n % 7 != 0) {
@@ -299,23 +299,20 @@
 		}
 	</script>
 	<script type="foo" id="ch0104/13">
-			var x = Number(prompt(""))
-			if ( x < 5) {
-				 y = -x + 2.5 
-			} else if (x < 10) {
-				y = 2 - 1.5 * (x - 3) * (x - 3)
-			} else if (x < 20) {
-				y = x / 2 - 1.5 
-			}
+		var x = Number(prompt(""))
+		if (x < 5) {
+			y = -x + 2.5
+		} else if (x < 10) {
+			y = 2 - 1.5 * (x - 3) * (x - 3)
+		} else if (x < 20) {
+			y = x / 2 - 1.5
+		}
+		console.log(y)
 	</script>
 	<script type="foo" id="ch0104/14">
-		var a = Number(prompt(" "))
-		var c = (prompt("'y'/'n' "))
-		if (a <= 1000){
 
-		}
-	
-		
+
+
 
 	</script>
 	<script type="foo" id="ch0104/15">
@@ -323,13 +320,14 @@
 		var b = Number(prompt("b"))
 		var c = Number(prompt("c"))
 
-		var max =  a 
-			if (b > max) {
-				max = c
-			}
-			if (c > max) {
-				max = b 
-			}
+		var max = a
+		if (b > max) {
+			max = b
+		}
+		if (c > max) {
+			max = c
+		}
+		console.log(max)
 		// if (a > b && a > c) {
 		// 	console.log(a)
 		// }
@@ -429,7 +427,7 @@
 			a++
 			count += b
 		}
-		console.log(count + "," + count / n)
+		console.log(count + " " + (count / n).toFixed(5))
 	</script>
 	<script type="foo" id="ch0105/05">
 		var n = Number(prompt())
@@ -502,7 +500,7 @@
 		while (a <= n) {
 
 			if (a % 2 == 1) {
-				console.log(a)
+
 				count = count + a
 			}
 			a++
@@ -517,7 +515,7 @@
 		var a = m
 		while (a <= n) {
 			if (a % 17 == 0) {
-				console.log(a)
+
 				num = num + a
 			}
 			a++
@@ -553,29 +551,100 @@
 		while (a < N) {
 			var n = Number(prompt())
 			if (n == m) {
-				console.log(n)
+
 				count = count + 1
 			}
 			a++
 		}
 		console.log(count)
 	</script>
-	<script id="ch0105/13">
+	<script type="foo" id="ch0105/13">
+		var a = Number(prompt())
+		var n = Number(prompt()) // n次
+		var r = 0
+		var count = 1
+		while (r < n) {
+			count = count * a
+			r++
+		}
+		console.log(count)
+	</script>
+	<script type="foo" id="ch0105/14">
+		var x = Number(prompt())
+		var n = Number(prompt())
+		var num = x
+		var a = 0
+		while (a < n) {
+			num = num * 1.001
+			a++
+		}
+		console.log((num).toFixed(8) + "亿")
+	</script>
+	<script type="foo" id="ch0105/15">
+		var R = Number(prompt())
+		var M = Number(prompt())
+		var Y = Number(prompt())
+		var num = M
+		for (var i = 0; i < Y; i++) {
+			num = (1 + R * 0.01) * num
+
+		}
+		console.log(Math.ceil(num))
+	</script>
+	<script type="foo" id="ch0105/16">
+		var n = Number(prompt()) //年薪
+		debugger
+		var k = Number(prompt())
+		var b = 200
+		var num = b
+		var flag = false
+		for (var a = 1; a <= 20; a++) {
+			if (n * a >= num) {
+				flag = true
+				console.log(a)
+				break
+			}
+			var num = num * (1 + k / 100)
+		}
+		if (!flag) {
+			console.log('Impossible')
+		}
 
 	</script>
-	<script id="ch0105/14">
-
-	</script>
-	<script id="ch0105/15">
-
-	</script>
-	<script id="ch0105/16">
-
-	</script>
-	<script id="ch0105/17">
-
+	<script type="foo" id="ch0105/17">
+		var k = Number(prompt())
+		var a = 1
+		var b = 0
+		for (var i = 0; i < k; i++) {
+			var c = a + b;
+			a = b
+			b = c
+		}
+		console.log(c)
 	</script>
 	<script id="ch0105/18">
+		var n = Number(prompt())
+		var flag = false
+		var a = Number(prompt())
+		var b = Number(prompt())
+		var c = (a - b) / a
+		//debugger
+		for (var i = 1; i < n; i++) {
+			var x = Number(prompt())
+			var y = Number(prompt())
+			var z = (x - y) / x
+			if (c - z > 0.05) {
+				flag = true
+				console.log('better')
+			}
+			if (z - c > 0.05) {
+				flag = true
+				console.log('worse')
+			}
+			if (!flag) {
+				console.log('same')
+			}
+		}
 
 	</script>
 	<script id="ch0105/19">
